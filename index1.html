@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Shopping Cart Demo</title>
+  </head>
+  <body>
+    <div class="top">
+      <h1>חנות הפירות שלי</h1>
+    </div>
+    <div class="products">
+      <div class="product">
+        <h2>אננס</h2>
+        <p>20$</p>
+        <img
+          src="https://cashcow-cdn.azureedge.net/images/2a3377b5-84bb-4c1b-84eb-60aa9afcfed1.jpg"
+        />
+        <br />
+        <button onclick="addToCart(1)">הוסף לסל</button>
+      </div>
+      <div class="product">
+        <h2>אבטיח</h2>
+        <p>10$</p>
+        <img
+          src="https://www.hapardesan.co.il/images/itempics/2_30032020175948_large.jpg"
+        /><br />
+        <button onclick="addToCart(2)">הוסף לסל</button>
+      </div>
+      <div class="product">
+        <h2>מלון</h2>
+        <p>20$</p>
+        <img
+          src="https://www.ynet.co.il/PicServer5/2019/04/17/9193992/Capture.PNG"
+        /><br />
+        <button onclick="addToCart(3)">הוסף לסל</button>
+      </div>
+      <div class="product">
+        <h2>בננה</h2>
+        <p>10$</p>
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVERIRFRIWEhUSEhEREhEUFREYERISGBQZGRgUGBYcIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHzQrJSs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAgQBAwUGB//EADsQAAIBAgMFBgQDBgcBAAAAAAABAgMRBBIxBSFBUWEGInGBkaETMrHRQlLBQ2JyguHwFBUWI1Njogf/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIEAwUG/8QAMBEBAAIBAgQBCwQDAAAAAAAAAAECAxEhBBIxQVEFEzJhcYGRobHR8CJCweEUM1L/2gAMAwEAAhEDEQA/APswAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHI2x2goYa0ak+/JNxpLfUkuduC6sDrg85hO1+GqO15w35bzj3b8s0W0j0EJqSUk1JPemmmn4MJmJjqmAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABXxldU6cqj0ir25vgvN2PlXaWg8TUdZvLU0i0+7GKe5H0TtNiFDDzjuzTtGKduabf98z53QrJppu0ru657+HQw8VmtS0RWVq+Ll/HyWhKNpS4p7pvnf03HuewuLm5ShOXdlF2hfcpReq8UeR2jRTjGTt3JxknyV0n7NnoezD/wB6jLO00ryin3c18k1bz9i2LiOasT69JaojnpOvV9FABsYwAAAAAAAAAAAAAAAAAAAAAAAAAAACEpJK7dkuLAmaq1WMYuUmlFb22c7F7WSuoLM/zO+X04nmNp4uc2nObko71FborqkuJjy8bip6O8/L4rck92ntFtTNmqS3RjdQjyX3POf4bNQzS1alPwu217CvVeIrxpr5IO834alza81Ck4rWXdSPIte1rc09ZRbZypYCo4dyrJxnFXUrPc1z1PS9ntc8rOrGTeXim7LN5/qV8Ph8tOnF8IxT8kdajlgqNklKTlNu29uLil9WdseaY1ien9w7UyTWHuzJrpzvFSXFJmw93XVwAAAAAAAAAAAAAAAAAAAAAAAAAV6+JjHq+S1ObiMVKW6+Vcl+rM2bi8eLad58I/Nl645suYraEYbl3pclovFnFxWIlJ3k78orReQluNEpNu0Vdnj5+Mvk2np4O8Y4hqqTsihiMNOonGPdT1m+C6Lizs0sFbfN3fLgjNaaXgceXvZWzzVPZ0MPfK2775TerOVWq/FrxWsYu/jY7u0aycXf5fqQ2Vsbe6k45cytGHFLmyaTrOqnLq2O25GNpVMrwr4NVI+8fujrSwcbaEqmzI16Eqf4oPPTfKXLweh0x0mZmPGPtJ0dPYePUoqnJ2a+W/Fcjtnjdn0u7CW9SS801uPUYOvnjv1W5/c9Pgs/NWKW932VvXSVoAG9QAAAAAcPtRtt4SlCooRqOVRQyynk7uWUnJbne1vcjsrtDGvShVUcudXyt3tvtrx0OH/9E2dXrujCmo/DUZ55ybvGTcdLdI/Ur4GmqdOFODsopJHl+UOMnFHLjn9XdpxYotG72ix8XxJrFeB5SNaXE3wreKPNjypl7u3+LV6dV+hNVUebjXktJMsU8XLozTTypP7tfr9FLcL4O/mRI40cdzXob4Y6PO3ibKeUcVus/wAfVxnBaHSBUjiU9JJkvi3X2NMcVSeinJLZUrKOr8ihXxcnuXdX18zZKnHr6kHTjy92Ys2XNfasxEe/7OlK1jqpTkQUZS0i39PU6ForSJGdW3EwTgiPSt8Hfn8IU1g2/mfkvubcsYqyVjEq/JZvBNmp0qstIqC5t7/QiNI/1xr7N/mid+rXXrJas5lWpKbyxTk+S/U60NmLWc3Loty+5ZhTjFWjFR8EU8zed77errKNnJwmy1Fqc+9Jb0vwx+76l/KbJmuUi+kRGkImdGupyLOA3FXUtYc74vS1c53V5xUZzivzN+u/9S/s+fe8dxSqRvUk/wB76KxcwUe/H++B1xbZI08f5XvH6XWAB7LKAAAAANOIoqcXF6P26nkcbs+VOdnp+F8Gj2hpxFCM4uMlde66oxcXwcZ41ja0fmk/x4fF1x5Zp7Hi4SsbozTLe0Nmyg76xbsmvpbmVobOm9e6uuvofO5uFyUtppu9CmSswypWN1KMpfLFvrw9SzQwcY8Mz5y/RFnMMfDT++fdBbLH7YV44aXHd5mxYN/m+pszmVJc/c1VxY/D5uM2sgsH++vQksL++/Jf1JKXUZ+pfzWL/n5z90c1vFmND/skTVJc5P0IZ+ozLmXjzcdo+P3lWdfFPJHlfxbMpRX4fZGnOuZF1o8x5ysdNI+CNFl1CDkVpYmJrliehW3Ea9zTRZlM1SmVpVpPoR3vVnKchvLbOoam2ySgTUBEzJyMQiWM2WLfHh4kE1FNvckV5VHN30XBGis8ntTpq2UkdPAx3t8kUKMTs4enlilx1Zp4WvNf2KZp2bgAeqzAAAAAAcvtBiK9PDVJ4enGrVik4wk7K11mequ0ru11c6hxNp7cpwqTw6alVUIzlB8ISuk+ujKZLxSs2t0TEavHbF7W1MQp/EScoNWlHcpXV/l4cjqx2nN8bdLHn8HsxUXUUO9GcsytpGPCL667zowiz5vi7RbJNqztLdj2dFYyT/EzKryfFlWKJK5j5Zd1lTb4kosrJk4yZaKGqypElJleEjapE8irZmYTZFSJJk8kImGd5lIJmC0VRoyoklEi2ZUy0QjROwIOokrt28SvPaEVo838P3LbR1lEb9F1EKuIjDV3fCK1ZzpYqc9yWVdN79Tdh8Lbe97JjLrtjjX1nJp6TYnKbzS3LhHgupYhERiWMPScpKK8+iO1Kz7ZlEzstYChd5novdnTNcIJKy4Gw9zBi83TTv3Yr25p1AAdlQAAAAAPhfaXFVltqpmWSXxYpR32nRtaElzTil53PuhUxez6VVp1KUZuPyylFNx8Hqit45qzC1Z0nV82jVk+NjfTlNb03/fifQaezqMVZUoL+VP6iWzaL1pR8lb6HjT5KvG9bR8/7aK8RWNph4mGKt80POP2ZmrjqcIOc55IJpOUoyUU27K70PaR2ZRX7KPmr/U5na7Y8sTgp0KdoyvCcVZWbi72L18mz1vaPdE/nylP+RGukR8Xm8PtfDT+TEUZvlGrTb9LltVofmj6o+ef6bnRlKbs5vdKKjaMGuCXAlGnzVramLJjxxOlJ1aaRNofQ/jR/MvVD/FQ/PH1R4DC4eFVtKom1rGPzePgdLD7GSXdp66vi/M4XiKbTO/sW5a+L1csdBazgvGUSP8AmlL/AJIeTT+hwqOx3f5LeR0aOyOiRynJGuyeSviuf5rT4Sv4Rk/0IT2rH8MJvySXuycNmpG6OAQ5r9oRpRSltGb0gl1lJv2SMfFqy/Hl6RSXudOOEiuBtjRiuBMVyT3RrWOzkQwkpb3eXWTb+pco4Hn6IvqBJHSvDx1siby106KWiNqiEzdSpuTsldmiukbQ5z60YQbaSV2zsYWgoLq9WYw2GUFzb1f2LJ6/C8Nyfrv1+n9suTJzbR0AAbXEAAAAAAAAAAAAADDMMi0QKeP2dTqq0o7+ElukvPj5nhO1fZmcKNSdNKplWZxW6eRNOVo8Xa+7ifRWinjZJR373wXMz5OHx3tF7RvHf86utMlq7Q+KdksJOWIlWyypxipQbmt8r6RTeqS1/ofQaS3bma69NqTeRJN/h4GYJcGeNx1cl8nPaPV6mjHpppC3G5vgVYto3KoYKxMS7rCZm5X+MHiEdYshYzBsoVdoxgryko+LSKkttxe6ClP+GLt6vcdK809IlEu3mIymlqziwr156RUF13sv4TZk27zbb6minC5L9dlZvWrr4XCynv8Alj7vy4HWoUoxVorxfFlDDYZxOhC6PVwcPTF0jfx7smS826twMJmTW5AAAAAAAAAAAAAAAAMMwzNhYDXJlWpRuXbDKVmNU6uPVwN+BSrbLvwPSZEYdJFeRPPLx9TZ01o2Ua2GrrSX/lHvPgIi8JE424alu0LxlmHzuWz8TL9o14Rj9idPYFWXz1Jv+ZpeiPoKwseRJUERHCUjsnz0vGYbsvBb3FX5vX1Oxh9jQjwO78JD4aOsYohSbzKjSwkVwLEaZvUTNjpFVdUFAkokrCxOiGEjIBIyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9k="
+        /><br />
+        <button onclick="addToCart(4)">הוסף לסל</button>
+      </div>
+    </div>
+    <div class="containerSale">
+      <p>סל הקניות שלי</p>
+      <div class="sal" id="shoppingCart"></div>
+    </div>
+    <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>
